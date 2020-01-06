@@ -65,7 +65,8 @@ Phone:+254 795 587 577
 
 ## MIT License
 
-Copyright (c) 2019 Tracy Ogutu
+Copyright (c) 2019 Joyce Mungai
+
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
