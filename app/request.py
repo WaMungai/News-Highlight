@@ -3,10 +3,10 @@ from .model import Source,Article
 
 api_key=None
 base_url=None
-article_url=None
+articles_url=None
 
 def configure_request(app):
-    global api_key,base_url,article_url
+    global api_key,base_url,articles_url
     
     api_key = app.config['API_KEY']
     
@@ -14,11 +14,11 @@ def configure_request(app):
     print('********base source url*******')
     print(base_url)
 
-    article_url = app.config['ARTICLE_BASE_URL']
+    articles_url = app.config['ARTICLE_BASE_URL']
     print('*******base article url*********')
-    print(article_url)
+    print(articles_url)
     
-def process_souce(source_list):
+def process_source(source_list):
     source_results =[]
     
     for source_item in source_list:

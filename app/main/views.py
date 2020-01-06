@@ -20,5 +20,6 @@ def article(id):
     print('*************get_article****************')
     print(article)
     
-    title = f'{id}'
-    return render_template(article.html, title = title, article= article)
+    title = 'Article_Hub'
+    
+    return render_template(article.html, title = title, id=id, article= article)
