@@ -1,0 +1,23 @@
+{ extends 'bootstrao/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%%block styles%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename=css'css/index.css)}}">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|PT+Sans|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Shadows+Into+Light&display=swap" rel="stylesheet">
+    {%endblock%}
+
+    {% block navbar %}
+    {% include 'navbar.html'%}
+    {%%endblock%}
+</head>
+<body>
+    
+</body>
+</html>
