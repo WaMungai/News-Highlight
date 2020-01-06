@@ -1,0 +1,41 @@
+#general{
+    color:blue;
+    font-family:'Shadows Into Light',cursive;
+    text-align:center;
+    font-size:70px;
+}
+
+#latest{
+    font-family: 'Shadows Into Light',cursive;
+    font-size:30px;
+}
+
+#toggle{
+    font-family:'PT Sans',sans serif
+}
+
+#sourcename{
+    color:brown;
+    font-size:25px; 
+}
+
+#home{
+    font-family:'Shadows Into Light',cursive;
+    font-size:20px;
+}
+
+#sourcedesc{
+    font-family:'Coming Soon', cursive;
+}
+
+#sourcebtn{
+    font-size:20px;
+}
+
+#cardcontent{
+    background:transparent;
+}
+
+body{
+    background:transparent;
+}
