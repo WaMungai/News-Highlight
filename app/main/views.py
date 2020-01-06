@@ -21,4 +21,4 @@ def article(id):
     print(article)
     
     title = f'{id}'
-    return render_template(trial.html, title = title, article= article)
+    return render_template(article.html, title = title, article= article)
