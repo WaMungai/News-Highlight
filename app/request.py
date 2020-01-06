@@ -55,17 +55,21 @@ def process_articles(article_list):
         image=article_item.get('urlToImage')      
         date=article_item.get('publishedAt')
         
-    if url:
-        article_reults=article_list(id,author,title,description,url,image,date)
+    
+        article_result=Article(id,author,title,description,url,image,date)
         article_object.append(article_result)
         
-    return article_objects
+    return article_object
 
 def get_articles(id):
     '''
     Function that processes the articles and returns a list of articles get_objects
     '''
     get_articles_url = articles_url.format(id,api_key)
+    
+    print(f'*******{get_articles_url}*******')
+    print(get_articles_url)
+    
     with urllib.request.urlopen(get_articles_url) as url:
         articles_results=json.loads(url.read())
         articles_object =None
