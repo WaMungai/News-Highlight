@@ -1,10 +1,6 @@
 import urllib.request,json
 from .model import Source,Article
 
-api_key=None
-base_url=None
-articles_url=None
-
 def configure_request(app):
     global api_key,base_url,articles_url
     
@@ -26,6 +22,9 @@ def process_source(source_list):
         name =  source_item.get('name')
         language =source_item.get('language')
         country =source_item.get('country')
+        description=source_item.get('description')
+        url=source_item.get('url')
+        category=source_item.get('category')
         
         source_object=Source(id,name,description,url,category,language,country)
         source_results.append(source_object)
@@ -37,7 +36,7 @@ def get_source(category):
     print('********get_source_url***********')
     print(get_source_url)
     
-    with urllib.request.urlopen(get_source-url)as url:
+    with urllib.request.urlopen(get_source_url)as url:
         get_source_data = url.read()
         get_source_response=json.loads(get_source_data)
         
@@ -48,6 +47,7 @@ def get_source(category):
             source_results=process_source(source_result_list) #process_results is a function that takes in the list of dictionary objects and returns a list of movie objects
 
     return source_results
+
 
 
 def process_articles(article_list):

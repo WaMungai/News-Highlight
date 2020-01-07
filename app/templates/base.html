@@ -1,23 +1,33 @@
-{ extends 'bootstrap/base.html'%}
+{% extends 'bootstrap/base.html'%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {%%block styles%}
-    {{super()}}
-    <link rel="stylesheet" href="{{url_for('static',filename=css'css/index.css)}}">
-    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|PT+Sans|Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Coming+Soon&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Shadows+Into+Light&display=swap" rel="stylesheet">
-    {%endblock%}
 
-    {% block navbar %}
-    {% include 'navbar.html'%}
-    {%%endblock%}
+    <!-- Styles block -->
+{% block styles %}
+{{super()}}
+<link rel = "stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+{% endblock %} 
+
+<!-- Navbar block  --> 
+{% block navbar %}
+
+{% include 'navbar.html' %}
+
+{% endblock %}
+
 </head>
 <body>
-    
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

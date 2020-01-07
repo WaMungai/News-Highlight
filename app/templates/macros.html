@@ -1,24 +1,38 @@
-{% macro displaySourceList(source_list%}
-{%% for source_display in source_list| batch(4)%}
+{% macro displaySourceList(source_list)%}
+{% for source_display in source_list |batch(4)%}
 <div class="row">
-    {% for source in source_display%}
-        <div class="col-md-3" id="wholecard">
+    {% for source in source_display %}
+         <div class="col-md-3" id="wholecard">  
             <div class="panel panel-default" id="cardcontent">
                 <div class="panel-heading" id="sourcename">
-                    {{source.name}}
+                        {{ source.name}}  
                 </div>
                 <div class="panel-body">
-                    <p id="sourcedesc">{{source.decsription|truncate(100)}}</p>
+                    <p id="sourcedesc">
+                        {{ source.description |truncate(100)}}
+                    </p>
+
                     <div class="allbuttons">
-                        <span><a href="/article/{{source.id}}" id="articlebtn">View Articles:</a></span><br>
-                        <span><a href="{{source.url}}" id="sourcebtn">Visit {{source.id}}</a></span>
+
+                        <span><a href="{{source.url}}" id="sourcebtn">Visit {{source.id}}</a></span><br>
+
+                        <span><a href="/article/{{source.id}}" id="articlebtn">
+                            View Articles</a></span><br>   
+                        
+
                     </div>
-                   
+                        
                 </div>
             </div>
-        </div>
-    {%endfor%}
+        </div> 
+       
+    {% endfor %}   
 </div>
+{% endfor %}
+{% endmacro%}
+
+{% macro displayArticleList(article_list)%}
+{% for article in article |batch(4)%}
 {%endfor%}
-{%%endmacro%}
+{%endmacro%}
 
