@@ -41,10 +41,17 @@ def get_source(category):
         get_source_data = url.read()
         get_source_response=json.loads(get_source_data)
         
+        source_results = None
+        
+        if get_source_response['sources']:
+            source_result_list=get_source_response['sources']
+            source_results=process_source(source_result_list) #process_results is a function that takes in the list of dictionary objects and returns a list of movie objects
+
     return source_results
 
+
 def process_articles(article_list):
-    article:object=[]
+    article_object=[]
     
     for article_item in article_list : 
         id = article_item.get('id')
