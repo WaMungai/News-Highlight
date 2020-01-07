@@ -43,3 +43,18 @@ body{
 #wholecard{
     text-align: left;
 }
+
+.top{
+    font-family: 'Kaushan Script', cursive;
+    font-size:50px;
+    color:white;
+}
+#sourcebtn{
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}
+#articlebtn{
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+    
+}
